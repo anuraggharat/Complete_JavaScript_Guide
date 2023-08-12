@@ -1,6 +1,6 @@
 const user ={
     name:"Anurag",
-    email:"anuraggharat55@gmail.com",
+    email:"anuraggharat@gmail.com",
     sayHello(){
         console.log("Hello World!")
     }
