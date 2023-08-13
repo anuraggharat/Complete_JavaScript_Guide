@@ -86,3 +86,20 @@ shallowData.name = "Super Man"
 shallowData.abilities.strength=99
 console.log(shallowData.abilities.strength) //99
 console.log(hero.abilities.strength) //99
+
+//getters and setters
+
+const myObj = {
+    a:10,
+    get b(){
+        return this.a;
+    },
+    set c(x){
+        this.a = x;
+    }
+}
+
+console.log(myObj)
+console.log(myObj.b)
+myObj.c=12
+console.log(myObj)
