@@ -103,3 +103,12 @@ console.log(myObj)
 console.log(myObj.b)
 myObj.c=12
 console.log(myObj)
+
+
+const obj1 = {name:"test"}
+console.log(obj1);
+function Test(obj1){
+    obj1.name="Anurag"
+}
+Test(obj1)
+console.log(obj1);
