@@ -1,24 +1,26 @@
-// class Car{
-//     constructor(name,brand,speed,price){
-//         this.name=name;
-//         this.brand=brand;
-//         this.speed=speed;
-//         this.price=price;
-//     }
-//     getTopSpeed(){
-//         return this.speed
-//     }
-//     getPrice(){
-//         return this.price
-//     }
-// }
+//using class
+class Car{
+    constructor(name,brand,speed,price){
+        this.name=name;
+        this.brand=brand;
+        this.speed=speed;
+        this.price=price;
+    }
+    getTopSpeed(){
+        return this.speed
+    }
+    getPrice(){
+        return this.price
+    }
+}
 
 
-// const car1 = new Car("Q8","Audi",300,10000000)
-// console.log(car1.getTopSpeed())
-// console.log(car1.getPrice())
+const car1 = new Car("Q8","Audi",300,10000000)
+console.log(car1.getTopSpeed())
+console.log(car1.getPrice())
 
 
+//using Constructor Function
 
 function Car(name,brand,speed,price){
     this.name=name;
