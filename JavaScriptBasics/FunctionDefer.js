@@ -3,7 +3,7 @@
 console.log("Start");
 
 function heavyFunction(){
-    console.log("Heavy Computing")
+    console.log("Heavy Computing function" )
 }
 setTimeout(heavyFunction, 0);
 console.log("End");
