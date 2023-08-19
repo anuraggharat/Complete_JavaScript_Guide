@@ -23,9 +23,9 @@ const fruits = [
         mango:9
     }
 ] 
+//using loops
 const output = {}
 for (var i of fruits) {
-    console.log(i)  
     for (const key in i) {
         if (output[key]){
             output[key] =output[key] + i[key] 
@@ -34,5 +34,22 @@ for (var i of fruits) {
         }  
     }
 }
-
 console.log(output)
+
+
+//using reduce
+const output2 = fruits.reduce((acc,curr)=>{
+    for (let key in curr) {
+        if (acc[key]){
+            acc[key] = curr[key] + acc[key]
+        }
+        else{
+            acc[key] = curr[key]
+        }
+    }
+    return acc;
+},{})
+
+console.log(output2);
+
+
