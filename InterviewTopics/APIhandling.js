@@ -14,14 +14,19 @@ function getMeAJoke(){
     .finally(()=>console.log("resolved"))
 }
 
+
+console.log("Here");
+getMeJokeAsync()
 async function getMeJokeAsync(){
     try {
     const res = await fetch('https://api.chucknorris.io/jokes/random')
     const data = await res.json()
-
+    console.log("Inside Try");
     text.innerHTML=data.value
     } catch (error) {
         console.log(error)
     }
 
 }
+
+console.log("End");
