@@ -132,6 +132,21 @@ console.log(nums.slice(nums.length/2))
 console.log(nums.reverse())
 //sort an array
 console.log(nums.sort())
+//sort method sorts the array lexically
+const array = [1,11,33,2,44,21]
+console.log(array.sort());
+//[ 1, 11, 2, 21, 33, 44 ]
+function sortAscending(x,y){
+    if (x>y) {
+        return 1
+    }else if(x==y){
+        return 0
+    }else{
+        return -1
+    }
+}
+console.log(array.sort(sortAscending));
+console.log(array.sort((x,y)=>x-y));
 
 //join
 console.log(nums.join('-|-'))

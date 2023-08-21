@@ -112,3 +112,8 @@ function Test(obj1){
 }
 Test(obj1)
 console.log(obj1);
+
+console.log("Hero String",JSON.stringify(hero))
+console.log("Hero Object",JSON.parse(JSON.stringify(hero)))
+console.log(hero.toString())
+

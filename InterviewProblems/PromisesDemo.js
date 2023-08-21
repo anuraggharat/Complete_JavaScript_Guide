@@ -19,9 +19,8 @@ function getData(){
 getData().then((res)=>console.log(res)).catch(error=>console.log(error));
 //console.log(res);
 async function allData(){
-    const response = await getData()
+const response = await getData()
 console.log(response)
-
 }
-allData()
+//allData()
 console.log("End")
