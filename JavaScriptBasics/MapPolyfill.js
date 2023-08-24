@@ -4,6 +4,7 @@ const getDouble = (x) => x * 2;
 
 Array.prototype.myMap = function(operation){
     let output = [];
+    //this here refers the calling object
     for (let index = 0; index < this.length; index++) {
         output.push(operation(this[index]));
     }
