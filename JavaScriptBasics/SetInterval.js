@@ -1,9 +1,9 @@
 function print(){
     console.log("Print");
-    if(true) clearInterval(printer)
+    clearInterval(printer)
 }
 
-//const printer = setInterval(print,2000)
+const printer = setInterval(print,2000)
 const watch = document.getElementById('watch')
 const text = document.getElementById('text')
 

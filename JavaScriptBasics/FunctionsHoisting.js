@@ -17,6 +17,11 @@ var getMySurname = function(){
 var getMyFullName = () =>{
     console.log("Anurag Gharat")
 } 
+
+//new function
+var getNickname = new Function('a','return a ')
+
 getMyName() //Anurag
 getMySurname() //Gharat
 getMyFullName() //Anurag Gharat
+console.log(getNickname("Anu")); //Anu

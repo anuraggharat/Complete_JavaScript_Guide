@@ -1,13 +1,19 @@
-function add(a,b){
-    return a+b;
+function logUser1(name,time,device){
+    console.log(`User ${name} has logged in`);
+    console.log(`User ${name} has logged in with device ${device} at ${time}`)
 }
-console.log(add(2,3))
+logUser1('Anurag','10AM','Samsung Note')
+logUser1('Virat')
 
-function curriedAdd(a){
-    return function(b){
-        return a+b;
+
+function logUser2(name){
+    console.log(`User ${name} has logged in`);
+
+    return function(time){
+        return function(device){
+        console.log(`User ${name} has logged in with device ${device} at ${time}`)
+        }
     }
 }
-const returnedFunction = curriedAdd(10)
-console.log(returnedFunction(20));
-console.log(curriedAdd(20)(40))
+logUser2("Anurag")("10AM")("Apple 13")
+logUser2("Virat")
