@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    section{
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid black;
+    }
+    div{
+        width: 30%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid red;
+        font-size: 40px;
+    }
+    .active{
+        background-color: red;
+        color:white;
+    }
+</style>
+<body>
+    <section id="parent">
+        <div>
+            1
+        </div>
+        <div>
+            2
+        </div>
+        <div>
+            3
+        </div>
+        <div>
+            4
+        </div>
+        <div>
+            5
+        </div>
+        <div>
+            6
+        </div>
+        <div>
+            7
+        </div>
+        <div>
+            8
+        </div>
+        <div>
+            9
+        </div>
+    </section>
+        
+</body>
+</html>
+<script>
+    let curr;
+document.getElementById('parent').addEventListener('click',(e)=>{
+    alert(`${String(event.target.innerHTML).trim()} clicked`)
+    if (curr) {
+        curr.classList.remove('active')
+    }
+    curr = e.target;
+    curr.classList.add('active')
+
+})
+</script>
