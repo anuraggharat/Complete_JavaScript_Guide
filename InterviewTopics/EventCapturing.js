@@ -3,43 +3,19 @@ document.querySelector("#grandparent").addEventListener(
   () => {
     console.log("grandparent");
   },
-  false
+  true
 );
 document.querySelector("#parent").addEventListener(
   "click",
   () => {
     console.log("parent");
   },
-  false
+  true
 );
 document.querySelector("#child").addEventListener(
   "click",
   () => {
     console.log("child");
   },
-  false
+  true
 );
-
-//Event Trickling and Event Capturing
-
-// document.querySelector("#grandparent").addEventListener(
-//   "click",
-//   () => {
-//     console.log("grandparent");
-//   },
-//   true
-// );
-// document.querySelector("#parent").addEventListener(
-//   "click",
-//   () => {
-//     console.log("parent");
-//   },
-//   true
-// );
-// document.querySelector("#child").addEventListener(
-//   "click",
-//   () => {
-//     console.log("child");
-//   },
-//   true
-// );

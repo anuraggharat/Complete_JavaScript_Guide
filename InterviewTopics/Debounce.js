@@ -1,22 +1,27 @@
-// document.getElementById("myid").addEventListener("click", () => {
-//   console.log("Clicked");
-// });
+function fetchData(...args){
+  console.log("fetching data",args[0],args[1]);
+}
 
 //one way of implementation
 const debounce = (fn, delay) => {
   let id;
+  let fncontext = this;
   return function (...args) {
     if (id) {
       clearTimeout(id);
     }
-
     id = setTimeout(() => {
-      fn(...args);
+      fn.call(fncontext,...args);
     }, delay);
   };
 };
 
-document.getElementById("myid").addEventListener("click",debounce(e=>{console.log("clicked")},2000));
+document.getElementById("button").addEventListener("click",debounce(()=>fetchData("1","2"),2000));
+document.getElementById("button1").addEventListener("click",()=>simpleDebounce(getmedata));
+document.getElementById("button2").addEventListener("click",()=>simpleDebounce(getmedata));
+document.getElementById("button3").addEventListener("click",()=>simpleDebounce(getmedata));
+document.getElementById("button4").addEventListener("click",()=>simpleDebounce(getmedata));
+
 
 
 
@@ -25,62 +30,18 @@ document.getElementById("myid").addEventListener("click",debounce(e=>{console.lo
 
 
 //simple implementation
-let c=0;
 function getmedata(){
-
-    console.log("Data being fetched",c++)
-    console.log(this.name)
-
+    console.log("Data being fetched")
 }
 
 let id
 
-function myFunc(){
-
+function simpleDebounce(fn){
     if(id){
         clearInterval(id)
     }
 
-    id =setTimeout(()=>{
-        getmedata()
-    },3000)
+    id = setTimeout(()=>{
+        fn()
+    },1000)
 }
-
-
-//intermediate implementation
-// const handleDebounce=(fn,d)=>{
-
-//     let timerid;
-    
-//     return function(){
-//         if (timerid) {
-//           clearTimeout(timerid);
-//         }
-
-        
-//         timerid = setTimeout(()=>{
-//             fn()
-        
-//         },d)
-//     }
-
-// }
-
-// const searchboxSuggestion = handleDebounce(getmedata,2000)
-
-const handleDebounce = (fn, d) => {
-  let timerid;
-  return function () {
-    if (timerid) {
-      clearTimeout(timerid);
-    }
- let context = this;
-
-    timerid = setTimeout(() => {
-      fn.apply(context,arguments);
-    }, d);
-  };
-};
-
-const searchboxSuggestion = handleDebounce(getmedata, 2000);
-
