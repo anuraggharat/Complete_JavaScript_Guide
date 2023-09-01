@@ -7,7 +7,7 @@ function factorial(n){
 }
 
 function factorialRec(n){
-    if (n<2) {
+    if (n<=2) {
         return n
     }
     return n * factorialRec(n-1)
