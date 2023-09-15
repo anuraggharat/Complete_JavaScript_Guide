@@ -90,6 +90,55 @@ class LinkedList{
         }
         this.size--
     }
+    removeValue(value){
+        if (this.isempty()) {
+            return 
+        }
+        if (this.head.value===value) {
+            this.head = this.head.next;
+            this.size--
+            return value;
+        }else{
+            let pointer = this.head
+            while (pointer.next && pointer.next.value!==value) {
+                    pointer = pointer.next;
+            }
+            if (pointer.next) {
+                pointer.next=pointer.next.next
+                this.size--;
+                return value;
+            }
+            return null
+        }
+        
+    }
+    search(value){
+        if (this.isempty()) {
+            return "Empty List"
+        }
+        let i = 0;
+        let pointer = this.head
+        while(pointer){
+        if (pointer.value===value) {
+            return `Position ${i}`;
+            }
+            i++;
+            pointer=pointer.next;
+        }
+        return "Not Found"
+    }
+    reverse(){
+        let prev=null;
+        let next=null;
+        let curr=this.head;
+        while(curr){
+            next = curr.next;
+            curr.next=prev;
+            prev = curr
+            curr = next;
+        }
+        this.head=prev;
+    }
 
 }
 
@@ -105,7 +154,18 @@ ll.append(20)
 ll.append(30)
 ll.insert(5,3)
 console.log(ll.print())
+ll.reverse()
+console.log(ll.print())
 ll.removeFrom(0)
 ll.removeFrom(5)
 ll.removeFrom(2)
 console.log(ll.print())
+ll.removeValue(10)
+ll.removeValue(60)
+console.log(ll.search(-10))
+console.log(ll.search(20))
+console.log(ll.search(-20))
+console.log(ll.print())
+ll.reverse()
+console.log(ll.print())
+
