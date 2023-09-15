@@ -8,6 +8,7 @@ class Node{
 class LinkedList{
     constructor(){
         this.head = null;
+        this.tail=null;
         this.size = 0
     }
     isempty(){
@@ -32,6 +33,7 @@ class LinkedList{
         const node = new Node(value)
         if (this.isempty()) {
             this.head = node;
+            this.tail=node
         }else{
             node.next = this.head;
             this.head = node
@@ -42,12 +44,10 @@ class LinkedList{
         const node = new Node(value)
         if (this.isempty()) {
             this.head=node
+            this.tail=node
         }else{
-            let pointer=this.head;
-            while (pointer.next !== null) {
-                pointer=pointer.next
-            }
-            pointer.next=node
+            this.tail.next=node
+            this.tail=node
         }
         this.size++;
     }
@@ -89,6 +89,32 @@ class LinkedList{
             pointer.next=removed.next
         }
         this.size--
+    }
+    removeFromFront(){
+        const value = this.head;
+        this.head=this.head.next;
+        this.size--;
+        return value;
+    }
+    removeFromEnd(){
+        if (this.isempty()) {
+            return null
+        }
+        const value = this.tail;
+        if (this.size===1) {
+         this.head,this.tail=null;   
+        }
+        else{
+            let prev = this.head;
+            while(prev.next!==this.tail){
+                prev=prev.next;
+            }
+            prev.next=null;
+            this.tail=prev;
+        }
+        this.size--;
+        return value;
+
     }
     removeValue(value){
         if (this.isempty()) {
@@ -153,18 +179,8 @@ ll.append(20)
 ll.append(30)
 ll.insert(5,3)
 console.log(ll.print())
-ll.reverse()
+ll.removeFromEnd()
+ll.removeFromFront()
 console.log(ll.print())
-ll.removeFrom(0)
-ll.removeFrom(5)
-ll.removeFrom(2)
-console.log(ll.print())
-ll.removeValue(10)
-ll.removeValue(60)
-console.log(ll.search(-10))
-console.log(ll.search(20))
-console.log(ll.search(-20))
-console.log(ll.print())
-ll.reverse()
-console.log(ll.print())
+
 
