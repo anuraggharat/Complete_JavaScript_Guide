@@ -17,7 +17,6 @@ function fibonacciRec(n){
 function generateSeq(end){
     const output = []
     for (let i = 0; i < end; i++) {
-        const res = 
         output.push(fibonacciRec(i))
     }
     console.log(output.toString());

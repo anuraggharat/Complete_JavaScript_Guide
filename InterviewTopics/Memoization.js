@@ -34,7 +34,6 @@ const memoizedFibonacci = memoize(fibonacci)
 function generateSeq(end){
     const output = []
     for (let i = 0; i < end; i++) {
-        const res = 
         output.push(memoizedFibonacci(i))
     }
     console.log(output.toString());
