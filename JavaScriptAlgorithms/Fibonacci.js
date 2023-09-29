@@ -13,6 +13,15 @@ function fibonacciRec(n){
     }
     return fibonacciRec(n-1) + fibonacciRec(n-2)    
 }
+
+function generateSeq(end){
+    const output = []
+    for (let i = 0; i < end; i++) {
+        const res = 
+        output.push(fibonacciRec(i))
+    }
+    console.log(output.toString());
+}
 //O(2**n)
 
 console.log(fibonacci(3))
