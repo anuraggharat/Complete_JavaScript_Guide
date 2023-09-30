@@ -81,6 +81,9 @@ const hero = {
 const hero2 = structuredClone(hero)
 console.log(hero2.abilities === hero.abilities) //true
 
+//create a deep clone
+const newClone = JSON.parse(JSON.stringify(hero))
+
 const shallowData = {...hero}
 shallowData.name = "Super Man"
 shallowData.abilities.strength=99
