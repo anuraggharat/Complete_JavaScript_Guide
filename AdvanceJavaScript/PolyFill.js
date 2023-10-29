@@ -1,28 +1,28 @@
-// let user ={
-//     fname:"Anurag",
-//     lname:"Gharat"
-// }
+let user1 ={
+    fname:"Anurag",
+    lname:"Gharat"
+}
 
-// let printName = function(ht,di){
-//     console.log(this.fname + " " + this.lname,ht,di)
-// }
-// let callmyname=printName.bind(user,"Alibag")
-// callmyname("Raigad")
+let printName = function(ht,di){
+    console.log(this.fname + " " + this.lname,ht,di)
+}
+let callmyname=printName.bind(user1,"Alibag")
+callmyname("Raigad")
 
 
 
-// Function.prototype.mybind=function (...args){
-//     //this refers to the function that calls mybind method so this ->printName
-//     console.log(this)
-//     let obj = this
-//     let params = args.slice(1)
-//     return function(...args2){
-//         obj.apply(args[0],[...params,...args2]);
-//     }
-// }
+Function.prototype.mybind=function (...args){
+    //this refers to the function that calls mybind method so this ->printName
+    console.log(this)
+    let obj = this
+    let params = args.slice(1)
+    return function(...args2){
+        obj.apply(args[0],[...params,...args2]);
+    }
+}
 
-// let callmyname2 = printName.mybind(user,"Alibag")
-// callmyname2("Raigad")
+let callmyname2 = printName.mybind(user,"Alibag")
+callmyname2("Raigad")
 
 
 const user = {
@@ -45,9 +45,10 @@ sayMyName1()
 const sayMyName2 = printMyName.bind(user,"Alibag");
 sayMyName2()
 
+
 // Our Own implementation
 
-Function.prototype.myBind=function (user,...args){
+Function.prototype.myBind = function (user,...args){
 
     let Fncontext = this
     //this corresponds who calls this method
