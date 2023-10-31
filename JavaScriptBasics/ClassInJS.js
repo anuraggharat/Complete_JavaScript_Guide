@@ -14,11 +14,9 @@ class Car{
     }
 }
 
-
 const car1 = new Car("Q8","Audi",300,10000000)
 console.log(car1.getTopSpeed())
 console.log(car1.getPrice())
-
 
 //using Constructor Function
 

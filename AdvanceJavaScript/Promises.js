@@ -7,8 +7,18 @@ var i = 0
 //fetch('https://jsonplaceholder.typicode.com/todos/1').then(res=>res.json()).then(res=>console.log("res",res)).then(res=>i++)
 //console.log("i",i)
 
+const myData = new Promise((resolve, reject)=>{
+        let data = 'Anurag'
+        setTimeout(()=>{
+            if (true) {
+                resolve(data)
+            } else {
+                reject('Rejected')
+            }
+        },2000)
+})
 
-
+myData.then((res)=>console.log(res)).catch(err=>console.log(err)).finally(()=>console.log('Performing cleanup'))
 
 function getPost(){
     const promise = new Promise((resolve,reject)=>{

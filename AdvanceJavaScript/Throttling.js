@@ -9,7 +9,7 @@ const throttle = (fn, delay) => {
       let args = arguments;
     if (flag) {
       flag = false;
-      fn.apply(context,arguments);
+      fn.apply(context,args);
     }
     setTimeout(() => {
       flag = true;

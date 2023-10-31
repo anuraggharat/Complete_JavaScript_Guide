@@ -28,6 +28,8 @@ class User extends Person{
 
 const user = new User("anuraggharat","anurag",24) 
 Object.assign(User.prototype,speechMixin)
+//the object.assign method is used to create a new object
+// Object.assign(target, source)
 user.sayName() //my name is anurag
 console.log(user.mixinname); //speech mixin
 

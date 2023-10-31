@@ -40,7 +40,6 @@ function simpleDebounce(fn){
     if(id){
         clearInterval(id)
     }
-
     id = setTimeout(()=>{
         fn()
     },1000)

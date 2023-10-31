@@ -6,9 +6,10 @@ const cube = (n) =>{
 }
 //decorator functions
 const logger=(fn)=>{
-    console.log("Called");
+    console.log(`Called at ${Date.now()}`);
     return fn;
 }
+console.log(logger(square)(2))
 
 const checkParams=(fn)=>{
     return function(...params){
