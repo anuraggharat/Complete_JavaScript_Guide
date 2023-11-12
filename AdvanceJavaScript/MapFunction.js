@@ -18,7 +18,9 @@ function isOdd(x){
 //Reduce
 
 //Reduce takes in two parametes Accumulator(acc) and Current(cur)
-//Acc is also called as the first or previous value hence in reduce the mapping starts from second element because in second element acc is first element and curr is second
+//Acc is also called as the first or previous value hence in 
+//reduce the mapping starts from second element because in second 
+//element acc is first element and curr is second
 //Acc is initialized at the first element [0]
 console.log(arr.reduce((acc, cur) => {
         console.log("Runs")
