@@ -1,11 +1,12 @@
-class Queue{
+//queue in the form of obj
+// obj = { 1:"", 2:"", 3:""  }
 
+class Queue{
     constructor(){
         this.items = {};
         this.rear = 0;
         this.front = 0;
     }
-
     enqueue(ele){
         this.items[this.rear] = ele
         this.rear++;

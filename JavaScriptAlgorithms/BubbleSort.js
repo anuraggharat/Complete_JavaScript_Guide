@@ -17,7 +17,7 @@ function BubbleSortOne(arr){
 }
 
 function BubbleSortTwo(arr){
-    let flag;
+    let flag; //to improve performance
     for (let i = 0; i < arr.length; i++){
         for (let j = 0; j < arr.length - 1 - i; j++) {
             flag = false;
@@ -29,7 +29,7 @@ function BubbleSortTwo(arr){
             }
         }
         if (flag === false) {
-            break;
+            break; //if no swapping happens that means array is sorted
         }
     }
 }

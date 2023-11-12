@@ -13,3 +13,19 @@ console.log(even);
 
 const total = arr.reduce((a,b)=>a+b)
 console.log(total);
+
+const myObj = {
+    name:'Anurag',
+    getName(){
+        console.log('Inside normal function',this)
+        const inside = () => {
+            console.log('Inside Arrow function',this)
+        }
+    inside()
+    },
+    outside: () => {
+        console.log('Outside normal function',this)
+    }
+}
+myObj.getName()
+myObj.outside()

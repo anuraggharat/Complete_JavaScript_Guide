@@ -1,3 +1,5 @@
+//check if given number is power of two
+
 //O(logn)
 function powerOf2(n){
     if (n<1) {

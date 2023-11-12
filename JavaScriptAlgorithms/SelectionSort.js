@@ -13,7 +13,7 @@ function selectionSort(array){
     }
 }
 
-const array=[64,22,51,69,11,27,42]
-selectionSort(array)
-console.log(array)
+const arr=[64,22,51,69,11,27,42]
+selectionSort(arr)
+console.log(arr)
 //O(nXn)

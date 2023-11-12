@@ -1,4 +1,4 @@
-function quickSortOne(arr){
+function QuickSort(arr){
     if (arr.length < 2) {
         return arr;
     }
@@ -13,7 +13,7 @@ function quickSortOne(arr){
             left.push(arr[i])
         }        
     }
-    return [...quickSort(left),pivot,...quickSort(right)]
+    return [...QuickSort(left),pivot,...QuickSort(right)]
 }
 
 var items = [10,5,3,7,6,2,9];
