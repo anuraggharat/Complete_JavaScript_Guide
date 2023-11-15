@@ -150,3 +150,13 @@ console.log(array.sort((x,y)=>x-y));
 
 //join
 console.log(nums.join('-|-'))
+
+
+const numbers = [2,4,6,8,10,11]
+
+function checkIfEven(n){
+    return n%2===0
+}
+
+console.log(numbers.some(checkIfEven(x)));
+console.log(numbers.every(checkIfEven(x)));
