@@ -67,5 +67,6 @@ console.log(ht.get("steve"))
 console.log(ht.get("blackwidow"))
 ht.remove("steve")
 ht.print()
+console.log(ht);
 
 

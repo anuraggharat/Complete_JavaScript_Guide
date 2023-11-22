@@ -20,8 +20,6 @@ class CircularQueue{
             if (this.front===-1) {
                 this.front++;
             }
-        }else if(this.isFull() && this.front > 0){
-
         }
     }
     secondEnqueue(ele){

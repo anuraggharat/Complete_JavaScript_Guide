@@ -45,6 +45,7 @@ graph.addVertex('A')
 graph.addVertex('B')
 graph.addEdge('A','B')
 graph.addEdge('A','C')
+console.log(graph);
 graph.print()
 console.log(graph.hasEdge('A','B'))
 console.log(graph.hasEdge('C','B'))

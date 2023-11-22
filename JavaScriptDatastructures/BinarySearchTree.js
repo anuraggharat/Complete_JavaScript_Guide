@@ -101,6 +101,8 @@ class BinarySearchTree{
     delete(value){
         this.root = this.deleteNode(this.root,value)
     }
+    //function to find the node to delete
+    //also returns a node which becomes the new node
     deleteNode(root,value){
         if (root===null) {
             return null
@@ -109,14 +111,19 @@ class BinarySearchTree{
         }else if(value > root.value){
             root.right = this.deleteNode(root.right,value)
         }else{
+            //if value has found what to do
+            //no child node then make the node null i.e delete
             if (!root.left && !root.right) {
                 return null
             }
+            //return the element which will take the place of the deleted node
             if (!root.left && root.right) {
                 return root.right
             }else if (!root.right && root.left) {
                 return root.left
             }
+            //copy the inorder successor(right) and delete it
+            //in BST the inorder successor is the node with least value in right sub tree
             root.value = this.getMin(root.right)
             root.right = this.deleteNode(root.right,root.value)
         }

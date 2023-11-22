@@ -52,7 +52,7 @@ class LinkedList{
         this.size++;
     }
     insert(value,position){
-        if (position<0 || position>this.size) {
+        if (position < 0 || position > this.size) {
             return
         }
         const node = new Node(value)
