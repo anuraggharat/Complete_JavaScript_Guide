@@ -16,7 +16,7 @@ const canRun = {
 const canAttack = {
     attack(){console.log(`${this.name} can attack`)}
 }
-
+const raichu = Object.assign({},canAttack,canRun)
 Object.assign(Pokemon.prototype,canFly,canAttack,canRun,canSwim)
 const mewto = new Pokemon('mewto')
 mewto.fly()
