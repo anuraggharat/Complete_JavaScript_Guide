@@ -40,5 +40,3 @@ console.log(lru.lru)
 lru.add(4,{name:'banner'})
 console.log(lru.lru)
 
-
-
