@@ -5,10 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interview Problems</title>
 </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+    .outercircle{
+        height: 500px;
+        width: 500px;
+        background-image: conic-gradient(green var(--percent),rgb(221, 221, 221) 0);
+        border-radius: 50%;
+
+    }
+</style>
 <body>
     <ul id="list">
         <li>Add below</li>
     </ul>
+
+    <div>
+        <input type="range" name="" id="input" value="10" min="0" max="100">
+    </div>
+    <div class="outercircle" style="--percent:10%" id="piechart">
+    </div>
 </body>
-<script src="./InsertingElement.js" defer></script>
+<script src="./PieChart.js" defer></script>
+<script defer>
+    const slider = document.querySelector('#input')
+    const piechart = document.querySelector('#piechart')
+
+    slider.addEventListener('input',(e)=>{
+        piechart.style = `--percent:${e.target.value}%`
+    })
+</script>
 </html>
